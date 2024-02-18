@@ -2,16 +2,12 @@ package org.example.rabota.page;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class SignIn extends RabotaBasePage {
-    @FindBy(how = How.XPATH, using = "//div/button[contains(@class, 'user-profile-header__sign-in')]")
-    private SelenideElement signIn;
-    //private SelenideElement signIn = $(By.xpath("//div/button[contains(@class, 'user-profile-header__sign-in')]"));
 
+    private final SelenideElement signIn = $(By.xpath("//div/button[contains(@class, 'user-profile-header__sign-in')]"));
     private final SelenideElement numberOrEmailInput = $(By.xpath("//input[@name='login']"));
     private final SelenideElement continuePressNumberOrEmail = $(".auth-main-step__button-content");
     private final SelenideElement passwordElement = $(By.xpath("//input[@name='password']"));
