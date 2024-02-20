@@ -14,7 +14,7 @@ public class SignIn extends RabotaBasePage {
     private final SelenideElement continuePassword = $(By.xpath("//button[contains(@class, 'auth-authorization-step__form-button')]"));
 
     public SignIn open() {
-        super.open(getBaseUrl());
+        super.open();
         return this;
     }
 

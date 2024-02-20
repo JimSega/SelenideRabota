@@ -15,13 +15,25 @@ java {
     }
 }
 
+ext {
+    lombokVersion = "1.18.22"
+    junitVersion = "5.10.0"
+}
+
 dependencies {
-    implementation platform('org.junit:junit-bom:5.10.0')
-    implementation 'org.junit.jupiter:junit-jupiter'
-    implementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+
+    implementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    implementation "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
+    implementation "org.junit.platform:junit-platform-engine:1.9.1"
+
     implementation 'com.codeborne:selenide:7.0.4'
 
     implementation 'org.aeonbits.owner:owner:1.0.12'
+
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 }
 
 test {
