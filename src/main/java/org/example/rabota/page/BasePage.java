@@ -5,18 +5,20 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 
-public class RabotaBasePage {
+public class BasePage {
 
     private final SelenideElement container = $("#__nuxt");
 
-    public RabotaBasePage open() {
+    public BasePage open() {
         Selenide.open("/");
         return this;
     }
 
-    public RabotaBasePage shouldBeVisible() {
+    public BasePage shouldBeVisible() {
         container.shouldBe(visible);
+        sleep(10000);
         return this;
     }
 

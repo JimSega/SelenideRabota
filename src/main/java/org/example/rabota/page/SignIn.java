@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class SignIn extends RabotaBasePage {
+public class SignIn extends BasePage {
 
     private final SelenideElement signIn = $(By.xpath("//div/button[contains(@class, 'user-profile-header__sign-in')]"));
     private final SelenideElement numberOrEmailInput = $(By.xpath("//input[@name='login']"));
@@ -38,7 +38,7 @@ public class SignIn extends RabotaBasePage {
         return this;
     }
 
-    public RabotaBasePage clickPassword() {
+    public BasePage clickPassword() {
         continuePassword.click();
         return this;
     }
