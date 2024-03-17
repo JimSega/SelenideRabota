@@ -8,6 +8,4 @@ public abstract class BasePage {
         Selenide.open("/");
         return this;
     }
-
-
 }

@@ -10,4 +10,9 @@ public interface GeneralConfig extends Config {
     String url();
 
     String userName();
+    @Key("url.resume")
+    String resume();
+    String firstName();
+    String lastName();
+    String year();
 }

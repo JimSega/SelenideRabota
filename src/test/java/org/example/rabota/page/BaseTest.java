@@ -14,12 +14,14 @@ public class BaseTest {
 
     @BeforeAll
     public static void start() {
+        WebDriverRunner.clearBrowserCache();
         browser = "Chrome";
         baseUrl = generalConfig.url();
         pollingInterval = 50;
         timeout = 20000;
         pageLoadTimeout = 60000;
         browserSize = "1920x1080";
+
     }
 
     public User getDefaultUser() {
